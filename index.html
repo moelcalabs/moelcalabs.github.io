@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MOELCA LABS · Sitios y sistemas web a la medida</title>
+<meta name="description" content="MOELCA LABS diseña y desarrolla sitios corporativos, landing pages y sistemas web para empresas de cualquier rubro en Chile. Prototipo y pruebas antes de cada entrega.">
+<meta property="og:title" content="MOELCA LABS · Ingeniería a la medida de tu negocio">
+<meta property="og:description" content="Sitios y sistemas web para empresas de cualquier rubro. Santiago, Chile.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1B33">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='15' fill='%230E1B33'/%3E%3Cpath d='M17 41.5V19.5L32 35.5L47 19.5V41.5' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='35.5' r='4.6' fill='%23B9D83F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Símbolos reutilizables: logo e iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="iso" viewBox="0 0 64 64">
+    <rect x="2" y="2" width="60" height="60" rx="15" style="fill:var(--iso-frame)"/>
+    <path d="M17 41.5V19.5L32 35.5L47 19.5V41.5" style="fill:none;stroke:var(--iso-stroke)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17" cy="46" r="4" style="fill:var(--iso-frame);stroke:var(--iso-stroke)" stroke-width="3"/>
+    <circle cx="47" cy="46" r="4" style="fill:var(--iso-frame);stroke:var(--iso-stroke)" stroke-width="3"/>
+    <circle cx="32" cy="35.5" r="4.6" fill="#B9D83F"/>
+  </symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="4.25" width="18.5" height="15.5" rx="2.5"/><path d="M2.75 9h18.5"/></g></symbol>
+  <symbol id="i-landing" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="2.75" width="18.5" height="18.5" rx="2.5"/><path d="M7 8h10M7 12h6"/><rect x="7" y="15" width="6" height="3" rx="1"/></g></symbol>
+  <symbol id="i-system" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="2.75" width="18.5" height="18.5" rx="2.5"/><path d="M9 2.75v18.5M12.5 15l2-3 2 2 2-4"/></g></symbol>
+  <symbol id="i-qa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.75"/><path d="M15.5 15.5l5.25 5.25M7.75 10.5l2 2 3.5-3.75"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="5" width="18.5" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6 8.5-6"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5l1.2-3.6A8 8 0 1 1 8.3 19z"/><path d="M9 10.5h6M9 13.5h4"/></g></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="2.75" width="18.5" height="18.5" rx="2.5"/><path d="M7.5 10.5v6M7.5 7.5v.01M11.5 16.5v-6M11.5 13a2.5 2.5 0 0 1 5 0v3.5"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="MOELCA LABS, ir al inicio">
+      <svg width="34" height="34" aria-hidden="true"><use href="#iso"/></svg>
+      <span class="word" style="font-size:1.02rem">MOELCA <span class="labs">LABS</span></span>
+    </a>
+    <nav class="main" id="nav" data-open="false" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar a modo oscuro"><svg width="20" height="20"><use href="#i-moon"/></svg></button>
+      <button class="icon-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg width="20" height="20"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== INICIO ===== -->
+<div class="wrap" id="inicio">
+  <div class="hero">
+    <div class="text">
+      <span class="label">MOELCA LABS · Santiago, Chile</span>
+      <h1>Ingeniería a la medida de <em>tu negocio</em>.</h1>
+      <p class="lead">Diseño y desarrollo sitios y sistemas web para empresas de cualquier rubro. Cada proyecto pasa por un prototipo y por pruebas antes de entregarse, para que funcione bien desde el primer día.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contacto">Cuéntame tu proyecto</a>
+        <a class="btn btn-ghost" href="#proyectos">Ver proyectos</a>
+      </div>
+    </div>
+    <aside class="spec" aria-label="Ficha técnica del estudio">
+      <div class="spec-head"><span class="label">Ficha técnica</span><span class="label"><span class="dot"></span>Recibiendo proyectos</span></div>
+      <dl>
+        <div><dt>Servicio</dt><dd>Sitios corporativos, landing pages y sistemas web</dd></div>
+        <div><dt>Para</dt><dd>Pymes, comercio, industria, servicios y emprendimientos</dd></div>
+        <div><dt>Tecnología</dt><dd>HTML, CSS, JavaScript y React</dd></div>
+        <div><dt>Método</dt><dd>Prototipo primero, pruebas antes de entregar</dd></div>
+        <div><dt>Atención</dt><dd>Remota, en todo Chile</dd></div>
+      </dl>
+    </aside>
+  </div>
+</div>
+
+<!-- ===== SERVICIOS ===== -->
+<section class="block" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">MOELCA Web</span>
+      <h2>Qué puedo hacer por tu empresa</h2>
+      <p class="lead">Soluciones web pensadas para tu forma de trabajar, sin plantillas genéricas y con un precio claro desde la propuesta.</p>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <span class="ic"><svg width="22" height="22"><use href="#i-web"/></svg></span>
+        <h3>Sitio corporativo</h3>
+        <p>La cara de tu empresa en internet: quiénes son, qué ofrecen y cómo contactarlos.</p>
+        <ul><li>Diseño adaptado a celular</li><li>Formulario de contacto o cotización</li><li>Listo para aparecer en Google</li></ul>
+      </article>
+      <article class="svc">
+        <span class="ic"><svg width="22" height="22"><use href="#i-landing"/></svg></span>
+        <h3>Landing page</h3>
+        <p>Una página enfocada en un solo objetivo: vender un servicio, lanzar un producto o captar contactos.</p>
+        <ul><li>Mensaje claro y directo</li><li>Botón a WhatsApp o formulario</li><li>Carga rápida</li></ul>
+      </article>
+      <article class="svc">
+        <span class="ic"><svg width="22" height="22"><use href="#i-system"/></svg></span>
+        <h3>Sistema web a medida</h3>
+        <p>Herramientas internas que reemplazan planillas y papeles: reservas, inventario, pedidos o paneles.</p>
+        <ul><li>Hecho según tu proceso real</li><li>Acceso desde el navegador</li><li>Construido con React</li></ul>
+      </article>
+      <article class="svc">
+        <span class="ic"><svg width="22" height="22"><use href="#i-qa"/></svg></span>
+        <h3>Revisión y pruebas (QA)</h3>
+        <p>¿Ya tienes un sitio o sistema? Lo reviso a fondo y te entrego un informe con los errores y cómo corregirlos.</p>
+        <ul><li>Pruebas en celular y computador</li><li>Formularios, enlaces y flujos</li><li>Informe claro y priorizado</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROYECTOS ===== -->
+<section class="block" id="proyectos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Laboratorio</span>
+      <h2>Proyectos</h2>
+      <p class="notice">Estos son proyectos concepto: muestran cómo resolvería necesidades comunes de distintos rubros. No corresponden a clientes reales. Los proyectos con clientes se publicarán aquí con su autorización.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar proyectos por tipo">
+      <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button type="button" data-filter="corporativo" aria-pressed="false">Sitios corporativos</button>
+      <button type="button" data-filter="landing" aria-pressed="false">Landing pages</button>
+      <button type="button" data-filter="sistema" aria-pressed="false">Sistemas web</button>
+    </div>
+    <div class="projects" id="projectList"></div>
+    <div class="swipe-hint" aria-hidden="true">Desliza para ver más <span class="dots-nav" id="dotsNav"></span></div>
+  </div>
+</section>
+
+<!-- ===== PROCESO ===== -->
+<section class="block" id="proceso">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Cómo trabajo</span>
+      <h2>Del prototipo a la operación</h2>
+      <p class="lead">Cinco etapas claras. En cada una sabes qué se está haciendo y qué vas a recibir.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="n">01</span><h3>Conversación</h3><p>Me cuentas tu negocio y lo que necesitas. Sin costo y sin compromiso.</p></li>
+      <li><span class="n">02</span><h3>Propuesta</h3><p>Te envío por escrito el alcance, los plazos y el precio.</p></li>
+      <li><span class="n">03</span><h3>Prototipo</h3><p>Ves cómo se verá y funcionará antes de programar todo. Lo ajustamos juntos.</p></li>
+      <li class="qa"><span class="n">04</span><h3>Desarrollo y pruebas</h3><p>Construyo la solución y la pruebo en celular y computador antes de mostrártela.</p></li>
+      <li><span class="n">05</span><h3>Entrega</h3><p>Publico el proyecto, te explico cómo usarlo y quedo disponible para dudas.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== SOBRE MÍ ===== -->
+<section class="block" id="sobre-mi">
+  <div class="wrap about">
+    <!-- Reemplaza este bloque por tu foto: <img src="foto.jpg" alt="Moisés Castillo" class="portrait"> -->
+    <div class="portrait" role="img" aria-label="Espacio para foto de Moisés Castillo">
+      <svg width="88" height="88" aria-hidden="true"><use href="#iso"/></svg>
+      <span>Aquí va tu foto</span>
+    </div>
+    <div class="text">
+      <span class="label">Sobre mí</span>
+      <h2>Hola, soy Moisés Castillo</h2>
+      <p>Soy analista programador titulado de INACAP y estoy terminando Ingeniería en Informática. Hoy trabajo como QA y analista funcional en el área de TI de una empresa del rubro gastronómico, donde pruebo sistemas de punto de venta (POS) y aplicaciones que se usan todos los días en locales con mucho movimiento.</p>
+      <p>Mi trabajo es encontrar los errores antes de que los encuentre el cliente. Ese mismo cuidado es el que pongo en cada proyecto de MOELCA LABS. El nombre sale de mis iniciales: <strong>MO</strong>isés <strong>EL</strong>ías <strong>CA</strong>stillo.</p>
+      <div class="facts">
+        <div><span class="label">Formación</span><span>Analista Programador, INACAP · Ingeniería en Informática, titulación 2026</span></div>
+        <div><span class="label">Experiencia</span><span>QA y análisis funcional en TI · Sistemas POS y aplicaciones para restaurantes</span></div>
+        <div><span class="label">Herramientas</span><span>HTML, CSS, JavaScript, React · Pruebas de software · Levantamiento de requisitos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="block" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="label">Contacto</span>
+        <h2>Cuéntame qué necesitas</h2>
+        <p class="lead">Escríbeme por el canal que prefieras. Te respondo con preguntas o con una propuesta clara.</p>
+      </div>
+      <div class="channels">
+        <a class="channel" id="chMail" href="#"><svg width="22" height="22"><use href="#i-mail"/></svg><span>Correo<small id="txtMail"></small></span></a>
+        <a class="channel" id="chWa" href="#" target="_blank" rel="noopener"><svg width="22" height="22"><use href="#i-chat"/></svg><span>WhatsApp<small id="txtWa"></small></span></a>
+        <a class="channel" id="chIn" href="#" target="_blank" rel="noopener"><svg width="22" height="22"><use href="#i-in"/></svg><span>LinkedIn<small>Ver perfil profesional</small></span></a>
+      </div>
+    </div>
+    <form id="contactForm" novalidate>
+      <div class="two">
+        <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" required autocomplete="name"></div>
+        <div class="field"><label for="f-empresa">Empresa (opcional)</label><input id="f-empresa" name="empresa" autocomplete="organization"></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-correo">Correo</label><input id="f-correo" name="correo" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-tipo">¿Qué necesitas?</label>
+          <select id="f-tipo" name="tipo">
+            <option>Sitio corporativo</option><option>Landing page</option><option>Sistema web a medida</option><option>Revisión y pruebas (QA)</option><option>Todavía no lo sé</option>
+          </select></div>
+      </div>
+      <div class="field"><label for="f-mensaje">Cuéntame un poco</label><textarea id="f-mensaje" name="mensaje" required placeholder="A qué se dedica tu empresa y qué te gustaría resolver."></textarea></div>
+      <div><button class="btn btn-primary" type="submit">Enviar mensaje</button></div>
+      <p class="form-msg" id="formMsg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- Botón flotante de WhatsApp (solo en celular) -->
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><span class="dot"></span>Hablemos por WhatsApp</a>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> MOELCA LABS · Santiago, Chile</span>
+    <span>Ingeniería a la medida de tu negocio.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
