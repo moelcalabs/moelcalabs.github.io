@@ -146,6 +146,9 @@ form{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line
 @media (max-width:860px){.contact{grid-template-columns:1fr;gap:32px}}
 @media (max-width:520px){.two{grid-template-columns:1fr}}
 
+/* Foto real en Sobre mí */
+.portrait.photo{display:block;width:100%;height:auto;padding:0;object-fit:cover;object-position:center 30%;box-shadow:0 18px 40px -24px color-mix(in srgb,var(--tinta) 55%,transparent)}
+
 /* ===== Animaciones ===== */
 :root{--ease:cubic-bezier(.2,.7,.2,1)}
 @keyframes subir{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
@@ -240,6 +243,7 @@ html.js .reveal.in{opacity:1;transform:none}
   .swipe-hint{display:flex}
   /* Sobre mí: foto pequeña y redonda */
   .portrait{width:120px;aspect-ratio:1;border-radius:50%;padding:0}
+  .portrait.photo{width:132px;height:132px;object-position:center 22%;border:3px solid var(--surface);box-shadow:0 0 0 2px var(--lima)}
   .portrait span{display:none}
   .portrait svg{width:56px;height:56px}
   .svc{padding:20px}
