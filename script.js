@@ -5,7 +5,7 @@ const CONFIG = {
   correo:     "moisescastillo1605@gmail.com",      // después: contacto@moelca.cl
   whatsapp:   "56972537556",                         // número: 569 + 8 dígitos, sin + ni espacios
   linkedin:   "https://www.linkedin.com/in/moises-castillo-a2a23921a", // URL de tu perfil
-  formspree:  ""                                     // ID de Formspree (ej: "xyzabcd"). Vacío = el formulario abre tu correo
+  formspree:  "mrpbnwek"                             // ID de Formspree. Vacío = el formulario abre tu correo
 };
 
 /* PROYECTOS · para agregar uno, copia un bloque { ... } y cambia los textos.
@@ -158,7 +158,10 @@ $("#contactForm").addEventListener("submit", async e => {
   if (CONFIG.formspree) {
     msg.textContent = "Enviando…";
     try {
-      const r = await fetch("https://formspree.io/f/" + CONFIG.formspree, { method:"POST", headers:{ "Accept":"application/json" }, body:new FormData(f) });
+      const datos = new FormData(f);
+      datos.set("email", d.correo);                       // Formspree usa "email" para "Responder a"
+      datos.set("_subject", "Nuevo contacto desde moelcalabs.github.io: " + d.tipo);
+      const r = await fetch("https://formspree.io/f/" + CONFIG.formspree, { method:"POST", headers:{ "Accept":"application/json" }, body:datos });
       if (!r.ok) throw new Error();
       f.reset(); msg.textContent = "¡Mensaje enviado! Te responderé a tu correo.";
     } catch { msg.textContent = "No se pudo enviar. Escríbeme directo a " + CONFIG.correo; }
