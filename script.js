@@ -149,6 +149,12 @@ $("#txtMail").textContent = CONFIG.correo;
 $("#chWa").href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent("Hola Moisés, vi tu sitio MOELCA LABS y quiero conversar sobre un proyecto.");
 $("#txtWa").textContent = "+" + CONFIG.whatsapp.replace(/^(\d{2})(\d)(\d{4})(\d{4})$/, "$1 $2 $3 $4");
 $("#chIn").href = CONFIG.linkedin;
+// Pie de página
+if ($("#ftMail")) {
+  $("#ftMail").href = $("#ftMail2").href = "mailto:" + CONFIG.correo;
+  $("#ftWa").href = $("#chWa").href;
+  $("#ftIn").href = CONFIG.linkedin;
+}
 
 $("#contactForm").addEventListener("submit", async e => {
   e.preventDefault();
