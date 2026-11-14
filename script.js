@@ -4,7 +4,7 @@
 const CONFIG = {
   correo:     "moisescastillo1605@gmail.com",      // después: contacto@moelca.cl
   whatsapp:   "56972537556",                         // número: 569 + 8 dígitos, sin + ni espacios
-  linkedin:   "https://www.linkedin.com/in/moises-castillo-a2a23921a", // URL de tu perfil
+  linkedin:   "https://www.linkedin.com/in/moises-castillo-moelca", // URL de tu perfil
   formspree:  "mrpbnwek"                             // ID de Formspree. Vacío = el formulario abre tu correo
 };
 
